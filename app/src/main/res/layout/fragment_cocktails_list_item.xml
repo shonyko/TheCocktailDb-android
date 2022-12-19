@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:padding="5dp">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:textColor="@color/black"
+        android:textSize="24sp"
+
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/image"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Sex on the beach" />
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+
+        android:contentDescription="@string/drink_image"
+        android:scaleType="centerCrop"
+
+        app:layout_constraintBottom_toTopOf="@id/description"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+    <ImageView
+        android:id="@+id/favorite_btn"
+        android:src="@drawable/circle"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+
+        android:contentDescription="@string/drink_image"
+        android:scaleType="centerCrop"
+
+        app:layout_constraintTop_toTopOf="@id/image"
+        app:layout_constraintEnd_toEndOf="@id/image" />
+
+    <ImageView
+        android:id="@+id/favorite_icon"
+        android:src="@drawable/favorite"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="8dp"
+
+        android:contentDescription="@string/drink_image"
+        android:scaleType="centerCrop"
+
+        app:layout_constraintTop_toTopOf="@id/favorite_btn"
+        app:layout_constraintEnd_toEndOf="@id/favorite_btn" />
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:textColor="@color/black"
+
+        android:textSize="18sp"
+        android:textStyle="italic"
+        app:layout_constraintTop_toBottomOf="@id/image"
+        tools:text="description" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
